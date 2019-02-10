@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+class mystring
+{
+private:
+    int size;
+    char* str;
+public:
+
+    mystring()
+    {
+        size = 100;
+        str = (char*)malloc(sizeof(char) * size );
+    }
+
+    mystring(int sz)
+    {
+        size = sz;
+        str = (char*)malloc(sizeof(char) * size);
+    }
+
+    bool set(char *ss)
+    {
+        int l = 0;
+        int i;
+        for ( i = 0 ; ss[i] != NULL ; i++ )
+        {
+            l++;
+        }
+        if ( l <= size )
+        {
+            str = ss;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    void print_str()
+    {
+        char* sss;
+        sss = str;
+        cout << sss << endl;
+    }
+
+
+};
